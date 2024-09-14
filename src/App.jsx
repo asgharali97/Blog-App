@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import authService from "./appWrite/auth";
 import { login, logout } from "./store/AuthSlice";
 import { Header,Footer } from "./components";
+import { Outlet } from "react-router-dom";
 function App() {
   const [loading, setLoading] = useState(true);
   const dispatch = useDispatch();
@@ -25,7 +26,7 @@ function App() {
       <div className="w-full block">
       <Header/>
       <main>
-        This is main content
+        <Outlet/>
       </main>
       <Footer/>
       </div>

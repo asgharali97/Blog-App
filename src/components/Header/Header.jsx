@@ -6,36 +6,37 @@ import {Container,Logo,LogoutBtn} from '../index';
 
 
 const Header = () => {
-  const authStatus = useSelector((state)=> state.auth.status)
+  const authStatus = useSelector((state)=> state.status)
   const navigate = useNavigate()
 
   const navItem = [
     {
-      name:"Home",
-      slug:"/",
-      active:true
-    },
+      name: 'Home',
+      slug: "/",
+      active: true
+    }, 
     {
-      name:"Login",
-      slug:"/login",
-      active:!authStatus
-    },
-    {
-      name:"Signup",
-      slug:"/signup",
-      active:!authStatus
-    },
-    {
-      name:"All Posts",
-      slug:"/all-posts",
-      active:!authStatus
-    },
-    {
-      name:"Add Post",
-      slug:"/add-post",
-      active:!authStatus
-    },
+      name: "Login",
+      slug: "/login",
+      active: !authStatus,
+  },
+  {
+      name: "Signup",
+      slug: "/signup",
+      active: !authStatus,
+  },
+  {
+      name: "All Posts",
+      slug: "/all-posts",
+      active: authStatus,
+  },
+  {
+      name: "Add Post",
+      slug: "/add-post",
+      active: authStatus,
+  },
   ]
+  console.log(navItem)
   return (
     <>
      <header>
@@ -49,7 +50,7 @@ const Header = () => {
           <ul className="flex ml-auto">
             {
               navItem.map((item)=>
-                item.active ?(
+                item.active ? (
                 <li key={item.name}>
                 <button
                 onClick={() => navigate(item.slug)}
