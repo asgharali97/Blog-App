@@ -1,53 +1,28 @@
-// import React from 'react'
-// import {Link} from 'react-router-dom';
-// import authService from '../appWrite/auth';
+import React from "react";
+import { Link } from "react-router-dom";
+import authService from "../appWrite/config";
 
-
-// const PostCard = ({$id,title ,featuredImage}) => {
-//   return (
-//     <>
-//       <Link
-//       to={`/post/${$id}`}
-//       >
-//         <div className='w-full rounded-xl p-4 bg-gray-100'>
-//             <div className='w-full justify-center mb-4'>
-//                 <img 
-//                 src={authService.getFilePreview(featuredImage)}
-//                 alt={title}
-//                 className='rounded-xl'
-//                  />
-//                  <h2 className='font-xl text-bold'>{title}</h2>
-//             </div>
-//         </div>
-//       </Link>
-//     </>
-//   )
-// }
-
-// export default PostCard
-
-import React from 'react'
-import {Link} from 'react-router-dom'
-import authService from '../appWrite/config'
-
-function PostCard({$id, title, featuredImage}) {
-    
+const PostCard = ({ $id, title, featuredImage }) => {
   return (
-    <Link to={`/post/${$id}`}>
-        <div className='w-full bg-gray-100 rounded-xl p-4'>
-            <div className='w-full justify-center mb-4'>
-                <img src={authService.getFilePreview(featuredImage)} alt={title}
-                className='rounded-xl' />
-
-            </div>
-            <h2
-            className='text-xl font-bold'
-            >{title}</h2>
+    <>
+      <Link to={`/post/${$id}`}>
+      <p></p>
+        <div className="max-w-sm p-4 rounded-xl overflow-hidden shadow-lg  bg-[#2d2d2d]">
+          <div className="relative h-48 w-full">
+            <img
+              src={authService.getFilePreview(featuredImage)}
+              alt={title}
+              className="object-cover h-full w-full rounded-md"
+            />
+          </div>
+          <div className="py-4 w-full">
+            <div className="font-bold text-xl mb-2 text-[#cecece]">{title}</div>
+          </div>
         </div>
-    </Link>
-  )
-}
+      </Link>
+    </>
+  );
+};
 
-
-export default PostCard
+export default PostCard;
 

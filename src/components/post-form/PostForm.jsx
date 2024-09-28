@@ -18,7 +18,6 @@ export default function PostForm({ post }) {
   const navigate = useNavigate();
   const userData = useSelector((state) => state.userData);
   console.log(userData.$id + " user Id ")
-  console.log(userData.$id)
 
   const submit = async (data) => {
     if (post) {
@@ -64,17 +63,6 @@ export default function PostForm({ post }) {
     return "";
   }, []);
 
-  // useEffect(() => {
-  //   const subscription = watch(value,({ name }) => {
-  //     if (name === "title") {
-  //       setValue("slug", slugTransForm(value.title), {
-  //         shouldValidate: true,
-  //       });
-  //     }
-  //   });
-
-  //   return () => subscription.unsubscribe();
-  // }, [watch, slugTransForm, getValues]);
   useEffect(() => {
     const subscription = watch((value, { name }) => {
         if (name === "title") {
