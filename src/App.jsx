@@ -22,8 +22,8 @@ function App() {
       });
   });
   return !loading ? (
-    <div className="min-h-screen flex flex-wrap content-between text-white bg-[#121212]">
-      <div className="w-full block">
+    <div className="min-h-screen flex flex-wrap text-white bg-[#121212]">
+      <div className="w-full block font-Manrope">
       <Header/>
       <main>
         <Outlet/>

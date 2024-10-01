@@ -14,7 +14,7 @@ const Home = () => {
 
   if (posts.length === 0) {
     return (
-      <div className="py-8 w-ful">
+      <div className="py-8 w-full">
         <Container>
           <div className="flex flex-wrap">
             <div className="p2 w-full">
