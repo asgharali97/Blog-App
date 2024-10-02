@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import authService from "../appWrite/config";
-import { Container, PostCard } from "../components";
-import Hero from "../components/Hero";
+import { Container, PostCard ,FeaturedPost,Hero } from "../components";
 const Home = () => {
   const [posts, setPosts] = useState([]);
 
@@ -29,10 +28,11 @@ const Home = () => {
   return (
     <div className="w-ful">
       <Hero/>
+      <FeaturedPost/>
       <Container>
         <div className="flex flex-wrap mt-32">
           {posts.map((post) => (
-            <div key={post.$id} className="p-2 w-1/4">
+            <div key={post.$id} className="p-2 w-[32%]">
               <PostCard {...post} />
             </div>
           ))}

@@ -1,5 +1,4 @@
 import React from "react";
-
 const Hero = () => {
   return (
     <>
@@ -24,40 +23,6 @@ const Hero = () => {
           </p>
         </div>
       </article>
-      <section className="w-full mt-32 px-32 flex flex-col">
-        <h2 className="w-full inline-block font-bold capitalize text-4xl">
-          Featured Posts
-        </h2>        
-        <div className="flex gap-10 mt-10">
-        <article className="relative">
-          <div className="w-[45vw] inline-block overflow-hidden rounded-xl">
-          <div className="absolute top-0 left-0 bottom-0 right-0 w-[45vw] h-[64vh] bg-gradient-to-b from-transparent from-0% to-[#1b1b1be6]/90 rounded-xl z-10 "></div>
-           <img className="w-[full] h-full object-center object-cover rounded-xl group-hover:scale-105 transition-all ease duration-300" src="https://images.unsplash.com/photo-1505751104546-4b63c93054b1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" srcset="" />
-           <div className="w-[40vw] absolute bottom-0 p-10 z-20">
-           <h2 className="font-bold text-2xl capitalize cursor-pointer">
-            <span className="bg-gradient-to-r from-accent to-accent from-[#ffdb4d80]/50  to-[#ffdb4d80]/50 bg-[length:0px_6px] hover:bg-[length:100%_6px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 ">
-              Productivity for developers increase your focus by theses tips 
-            </span>
-          </h2>
-           </div>
-          </div>
-        </article>
-        <article className="relative">
-        <div className="h-full w-full text-light flex">
-        <div className="flex h-[25vh] w-[20vw] rounded-xl overflow-hidden">
-        <img className="aspect-square w-full h-full object-cover object-center group-hover:scale-105 transition-all ease duration-300" src="https://images.unsplash.com/photo-1607798748738-b15c40d33d57?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" srcset="" />
-        </div>
-        <div className="w-full ml-4">
-        <h3 className="font-semibold capitalize text-lg cursor-pointer">
-        <span className="bg-gradient-to-r from-accent to-accent from-[#ffdb4d80]/50  to-[#ffdb4d80]/50 bg-[length:0px_6px] hover:bg-[length:100%_6px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 ">
-        Bring the inance code quality for anyone just do these things and see magic of code quality
-        </span>
-        </h3>
-        </div>
-        </div>
-        </article>
-        </div>
-      </section>
     </>
   );
 };

@@ -12,7 +12,9 @@ import RTE from "./RTE";
 import Select from "./Select";
 import AuthLayout from './AuthLayout'
 import PostForm from './post-form/PostForm'
+import Hero from './Hero';
+import FeaturedPost from "./FeaturedPost";
 
 export { Header, Footer, Logo, Button, Container,
          LogoutBtn,Input, Login, Signup, PostCard,
-        RTE, Select,AuthLayout,PostForm }
+        RTE, Select,AuthLayout,PostForm, Hero ,FeaturedPost }

@@ -118,6 +118,21 @@ export class Services{
         }
     }
 
+    async featuredPost(){
+        try {
+           return await this.database.listDocuments(
+            conf.appWriteDatabaseId,
+            conf.appWriteCollectionId,
+            [
+                Query.limit(2),
+                Query.offset(2)
+            ]
+        );
+        } catch (error) {
+            console.log('Appwrite server error :: featuredPost', error);
+        }
+          
+    }
      getFilePreview(fileID){
          return this.bucket.getFilePreview(
             conf.appWriteBucketId,
@@ -129,3 +144,18 @@ export class Services{
 const services = new Services()
 
 export default services
+
+
+
+
+
+// const page1 = await databases.listDocuments(
+//     '<DATABASE_ID>',
+//     '[COLLECTION_ID]',
+//     [
+//         Query.limit(25),
+//         Query.offset(0)
+//     ]
+// );
+
+
