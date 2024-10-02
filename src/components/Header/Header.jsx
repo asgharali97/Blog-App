@@ -48,13 +48,13 @@ const Header = () => {
 
   return (
     <>
-     <header className='px-10 py-5 flex items-center justify-between'>
+     <header className='px-10 py-5 flex items-center justify-between relative'>
         <div className='ml-6 flex items-center'>
             <Link to='/'>
               <Logo width='70px'   />
             </Link>
         </div>
-        <nav className="flex items-center border border-white py-3 px-8 rounded-full">
+        <nav className="flex items-center bg-[#d1d1d1] text-black border border-black py-3 px-8  w-max  border-solid rounded-full font-medium capitalize fixed top-2 right-1/2 translate-x-1/2 bg-light/80 backdrop-blur-sm z-50">
           <ul className="flex items-center">
             {
               navItem.map((item)=>
