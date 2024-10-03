@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Logo = ({width = '100px'}) => {
+const Logo = () => {
   return (
-    <div>
+    <div className='font-bold text-xl'>
       Think & Write
     </div>
   )

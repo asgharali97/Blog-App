@@ -9,7 +9,6 @@ const FeaturedPost = () => {
     authService.featuredPost().then((post) => {
       if (post) {
         setPosts(post.documents);
-        console.log(post.documents);
       }
     });
   }, []);
@@ -34,7 +33,7 @@ const FeaturedPost = () => {
                   />
                   <div className="w-[40vw] absolute bottom-0 p-10 z-20">
                     <h2 className="font-bold text-2xl capitalize cursor-pointer">
-                      <span className="bg-gradient-to-r from-accent to-accent from-[#ffdb4d80]/50 to-[#ffdb4d80]/50 bg-[length:0px_6px] hover:bg-[length:100%_6px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500">
+                      <span className="text-white bg-gradient-to-r from-accent to-accent from-[#7b00d3]/50 to-[#7b00d3]/50 dark:from-[#ffdb4d80]/50 dark:to-[#ffdb4d80]/50 bg-[length:0px_6px] hover:bg-[length:100%_6px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500">
                         {item.title}
                       </span>
                     </h2>
@@ -54,11 +53,11 @@ const FeaturedPost = () => {
                   </div>
                   <div className="w-full ml-4">
                     <h3 className="font-semibold capitalize text-lg cursor-pointer mt-4">
-                      <span className="bg-gradient-to-r from-accent to-accent from-[#ffdb4d80]/50 to-[#ffdb4d80]/50 bg-[length:0px_6px] hover:bg-[length:100%_6px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500">
+                      <span className="bg-gradient-to-r from-accent to-accent from-[#7b00d3]/50 to-[#7b00d3]/50 dark:from-[#ffdb4d80]/50 dark:to-[#ffdb4d80]/50 bg-[length:0px_6px] hover:bg-[length:100%_6px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500">
                         {item.title}
                       </span>
                     </h3>
-                    <span className="inline-block w-full capitalize text-gray-400 font-semibold text-base mt-2">
+                    <span className="inline-block w-full capitalize text-gray-600 dark:text-gray-400 font-semibold text-base mt-2">
                       {new Date(item.$createdAt).toLocaleDateString(undefined, {
                         year: "numeric",
                         month: "long",

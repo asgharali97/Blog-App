@@ -16,7 +16,7 @@ export default function PostForm({ post }) {
       },
     });
   const navigate = useNavigate();
-  const userData = useSelector((state) => state.userData);
+  const userData = useSelector((state) => state.user.userData);
   console.log(userData.$id + " user Id ")
 
   const submit = async (data) => {

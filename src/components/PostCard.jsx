@@ -7,7 +7,7 @@ const PostCard = ({ $id, title, featuredImage,$createdAt }) => {
     <>
       <div className="flex gap-4 mt-16 px-4">
         <article className="relative">
-          <div className="flex items-center text-white ">
+          <div className="flex items-center dark:text-white ">
             <Link
               to={`/post/${$id}`}
               className="h-full rounded-xl overflow-hidden"
@@ -22,11 +22,11 @@ const PostCard = ({ $id, title, featuredImage,$createdAt }) => {
               <div className="flex flex-col w-full mt-4">
                 <div className="inline-block my-1">
                   <h2 className="font-semibold capitalize text-lg">
-                    <span className="bg-gradient-to-r from-accent/50 to-accent/50  from-[#ffdb4d80]/50 to-[#ffdb4d80]50 bg-[length:0px_6px] hover:bg-[length:100%_6px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 ">
+                    <span className="bg-gradient-to-r from-accent/50 to-accent/50 from-[#7b00d3]/50 to-[#7b00d3]/50 dark:from-[#ffdb4d80]/50 dark:to-[#ffdb4d80]/50 bg-[length:0px_6px] hover:bg-[length:100%_6px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 ">
                     {title}
                     </span>
                   </h2>
-                  <span className="inline-block w-full capitalize text-gray-400 font-semibold text-base mt-2">
+                  <span className="inline-block w-full capitalize text-gray-600 dark:text-gray-400 font-semibold text-base mt-2">
                       {new Date($createdAt).toLocaleDateString(undefined, {
                         year: "numeric",
                         month: "long",

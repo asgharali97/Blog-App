@@ -3,17 +3,17 @@ import {Link} from 'react-router-dom'
 import Logo from '../Logo';
 const Footer = () => {
   return (
-    <section className="relative overflow-hidden py-10 bg-[#2d2d2d] text-white">
+    <section className="relative overflow-hidden py-10 bg-[#2d2d2d] text-white dark:bg-[#ffdb4dbb] dark:text-black">
     <div className="relative z-10 mx-auto max-w-7xl px-4">
         <div className="-m-6 flex flex-wrap">
             <div className="w-full p-6 md:w-1/2 lg:w-5/12">
                 <div className="flex h-full flex-col justify-between">
                     <div className="mb-4 inline-flex items-center">
-                        <Logo width="100px" />
+                        <Logo />
                     </div>
                     <div>
                         <p className="text-sm">
-                            &copy; Copyright 2024. All Rights Reserved by MegaBlog
+                            &copy; Copyright 2024. All Rights Reserved by Think & Write
                         </p>
                     </div>
                 </div>
