@@ -74,12 +74,12 @@ export default function PostForm({ post }) {
 
   return (
     <>
-      <form onSubmit={handleSubmit(submit)} className="flex flex-wrap">
+      <form onSubmit={handleSubmit(submit)} className="flex flex-wrap rounded-lg">
         <div className="w-2/3 px-3">
         <Input
         label='Title :'
         placeholder = 'Title'
-        className = 'mb-4'
+        className = 'mb-4 shadow-lg dark:bg-[#1b1b1b] dark:text-gray-300'
         {...register('title',{
           validate:true
         })}
@@ -87,7 +87,7 @@ export default function PostForm({ post }) {
         <Input
         label='Slug :'
         placeholder = 'Slug'
-        className = 'mb-4'
+        className = 'mb-4 shadow-lg dark:bg-[#1b1b1b] dark:text-gray-300'
         {...register('slug',{
           validate:true
         })}
@@ -103,7 +103,7 @@ export default function PostForm({ post }) {
         <Input
         label='Featured Image :'
         type='file'
-        className = 'mb-4'
+        className = 'mb-4 shadow-lg dark:bg-[#1b1b1b] dark:text-gray-300'
         accept="image/png, image/jpg, image/jpeg, image/gif"
         {...register('image',{
           validate:!post
@@ -122,12 +122,12 @@ export default function PostForm({ post }) {
         <Select
           options={["active", "inactive"]}
           label="Status"
-          className="mb-4"
+          className="mb-4 shadow-lg dark:bg-[#1b1b1b] dark:text-gray-300"
           {...register("status", { required: true })}
         />
-        <Button type="submit" bgColor={post ? "bg-green-500" : undefined} className="w-full">
+        <button type="submit" bgColor={post ? "bg-green-500" : undefined} className="inline-block  px-8 py-2  bg-[#1b1b1b] text-white rounded-full capitalize font-semibold border-2 border-solid border-light hover:scale-105 transition-all ease duration-200  text-base mt-4">
                {post ? "Update" : "Submit"}
-        </Button>
+        </button>
         </div>
       </form>
     </>

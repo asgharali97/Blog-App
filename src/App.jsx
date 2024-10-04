@@ -31,7 +31,7 @@ function App() {
   }, [ThemeMode]);
 
   return !loading ? (
-    <div className="min-h-screen flex flex-wrap dark:text-white dark:bg-[#121212]">
+    <div className="min-h-screen flex flex-wrap bg-[#f7ecffad] dark:text-white dark:bg-[#121212]">
       <div className="w-full block font-Manrope">
       <Header/>
       <main>
