@@ -27,7 +27,7 @@ const FeaturedPost = () => {
                 <div className="w-[45vw] inline-block overflow-hidden rounded-xl">
                   <div className="absolute top-0 left-0 bottom-0 right-0 w-[45vw] h-[72vh] bg-gradient-to-b from-transparent from-0% to-[#1b1b1be6]/90 rounded-xl z-10"></div>
                   <img
-                    className="aspect-[4/3] object-center object-cover rounded-xl group-hover:scale-105 transition-all ease duration-300"
+                    className="w-full object-center object-cover rounded-xl group-hover:scale-105 transition-all ease duration-300"
                     src={authService.getFilePreview(item.featuredImage)}
                     alt={item.title}
                   />
@@ -46,7 +46,7 @@ const FeaturedPost = () => {
                 <div className="h-full w-full text-light flex ">
                   <div className="flex h-[25vh] w-[20vw] rounded-xl overflow-hidden">
                     <img
-                      className="aspect-square w-full h-full object-cover object-center group-hover:scale-105 transition-all ease duration-300"
+                      className="aspect-square w-[100%]  object-cover object-center group-hover:scale-105 transition-all ease duration-300"
                       src={authService.getFilePreview(item.featuredImage)}
                       alt={item.title}
                     />

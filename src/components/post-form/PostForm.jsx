@@ -125,9 +125,9 @@ export default function PostForm({ post }) {
           className="mb-4 shadow-lg dark:bg-[#1b1b1b] dark:text-gray-300"
           {...register("status", { required: true })}
         />
-        <button type="submit" bgColor={post ? "bg-green-500" : undefined} className="inline-block  px-8 py-2  bg-[#1b1b1b] text-white rounded-full capitalize font-semibold border-2 border-solid border-light hover:scale-105 transition-all ease duration-200  text-base mt-4">
+        <Button type="submit" bgColor={post ? "bg-green-500" : undefined} className="inline-block  px-8 py-2  bg-[#1b1b1b] text-white rounded-full capitalize font-semibold border-2 border-solid border-light hover:scale-105 transition-all ease duration-200  text-base mt-4">
                {post ? "Update" : "Submit"}
-        </button>
+        </Button>
         </div>
       </form>
     </>
